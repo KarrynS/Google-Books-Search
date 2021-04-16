@@ -1,0 +1,14 @@
+.form-inline {
+
+}
+
+.form-group {
+    width: 80%;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    margin-left: 20px;
+}
