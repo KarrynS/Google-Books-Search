@@ -1,0 +1,44 @@
+.cardDiv {
+    list-style-type: none;
+    background-color: wheat;
+    box-shadow: 0px 10px 15px -5px rgba(37, 37, 37, 0.356);
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    border-radius: 20px;
+}
+
+.bookBtn {
+    color: wheat !important;
+    background-color: black !important;
+    margin-top: 20px;
+    margin-right: 10px;
+    justify-content: flex-end;
+}
+
+.bookBtn:hover {
+   
+    background-color: wheat !important;
+    color: black !important;
+}
+
+.imgDesc {
+    display: flex;
+}
+
+p {
+    color: black;
+    margin-left: 20px;
+}
+
+.img{
+    margin-right: 10px;
+}
+
+a {
+    color: wheat !important;
+}

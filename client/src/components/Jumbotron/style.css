@@ -4,10 +4,10 @@
     display: contents;
     margin-top: 20px;
     font-family: monospace;
-    font-style: oblique;
+    margin-bottom: 30px!important;
 }
 
-p {
+.lead {
     color: white;   
 }
 

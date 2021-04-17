@@ -7,10 +7,9 @@ import Navbar from "./components/Navbar/index";
 
 function App() {
   return (
-    
-      <>
-       <Router> 
-         <Navbar />
+    <>
+      <Router> 
+        <Navbar />
         <Switch>
           <Route exact path={["/", "/search"]}>
             <Search />
@@ -19,8 +18,8 @@ function App() {
             <Saved />
           </Route>
         </Switch>
-      </Router>
-      </>
+    </Router>
+    </>
     
   );
 }

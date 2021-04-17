@@ -1,12 +1,34 @@
-
+.searchDiv {
+    text-align: center;
+}
 
 .form-group {
-    width: 80%;
+    width: 90%;
     display: inline-block;
     margin-left: 20px;
     margin-top: 20px;
+    text-align: center;
 }
 
-.btn {
+.searchBtn {
     margin-left: 20px;
+    background-color: wheat !important;
+    color: black !important;
+    
+}
+
+.btn:hover {
+    color: wheat !important;
+    background-color: black !important;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.label {
+    margin-top: 40px;
+    padding-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+   
+    margin-left: 20px !important;
+    display: block ! important;
 }
