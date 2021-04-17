@@ -6,6 +6,7 @@
     color: white;
     width: 100vw;
     margin-bottom: 30px;
+    border-bottom: 5px solid wheat;
 }
 
 .nav-link {
@@ -17,6 +18,7 @@
 .navbar-brand {
     color: wheat !important;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 .ml-auto {

@@ -4,6 +4,10 @@
     display: contents;
     margin-top: 20px;
     font-family: monospace;
-    color: white;
     font-style: oblique;
 }
+
+p {
+    color: white;   
+}
+
