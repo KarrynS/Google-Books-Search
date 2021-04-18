@@ -46,7 +46,7 @@ function Saved(props) {
                                     </button>
                                     <button 
                                         onClick={() => deleteBook(book._id)}
-                                        className="btn deleteBtn">
+                                        className="btn bookBtn">
                                         <a type="submit">Delete</a>
                                     </button>
                                 </div>
