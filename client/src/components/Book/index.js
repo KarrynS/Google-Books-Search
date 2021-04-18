@@ -17,10 +17,11 @@ const Book = (props) => {
                     <button className="btn bookBtn">
                         <a href={props.link} target="blank">More</a>
                     </button>
-
-                    <button className="btn bookBtn">
-                        <a type="submit">Save</a>
-                    </button>
+                        <button     
+                            onClick={() => props.saveBook(props)}
+                            className="btn bookBtn">
+                                <a  type="submit">Save</a>
+                        </button> 
                 </div>
             </div>  
 

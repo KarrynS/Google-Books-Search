@@ -30,6 +30,25 @@ function Search() {
     } 
   }
 
+ const saveBook = (props)=> {
+    
+
+    if(props) {
+      console.log(props) 
+      API.saveBook({
+       
+        title: props.title,
+        authors: props.authors,
+        description: props.description,
+        image: props.image,
+        link: props.link
+      })
+      .then(res =>
+        console.log("Book saved"))
+      .catch(err => console.log(err));
+    }
+  }
+
     return (
         <>
           <Jumbotron /> 
@@ -49,6 +68,7 @@ function Search() {
                           onClick={handleFormSubmit}
                           type="submit" 
                           className="btn searchBtn"
+
                         >Submit</button>
             </form>
           </div>
@@ -57,16 +77,18 @@ function Search() {
           <div className="bookResults">
             <p>Results</p>
             <ul>
+              {console.log(searchList)}
               {searchList.map(book => {
                 return (
                   <Book
                   key={book.id}
-                  id={book.id}
+                  id={book.id} 
                   title={book.volumeInfo.title}
                   authors={book.volumeInfo.authors}
                   description={book.volumeInfo.description ? book.volumeInfo.description : "No description available"}
                   link={book.volumeInfo.infoLink}
                   image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://via.placeholder.com/128x166.png"}
+                  saveBook={saveBook}
                   />
                 );
               })}
