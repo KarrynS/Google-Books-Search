@@ -3,24 +3,6 @@ import API from "../../utils/API";
 import "./style.css";
 
 function Saved(props) {
-    // const [books, setBooks] = useState([]);
-
-    // useEffect(() => {
-    //     loadBooks()
-    // }, [])
-
-    // function loadBooks() {
-    //     API.getBooks()
-    //     .then(res => {
-    //         console.log("retrieving books")
-    //         setBooks(res.data)
-    //     })
-    //     .catch(err => console.log(err));
-    // }
-
-     // Deletes a book from the database with a given id, then reloads books from the db
- 
-
     return (
         <>
             <div className="cardDiv">

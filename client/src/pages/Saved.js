@@ -36,13 +36,6 @@ function SavedBooks() {
                             key={book._id}
                             book={book}
                             delete={deleteBook}
-
-                            // id={book._id}
-                            // title={book.title}
-                            // authors={book.authors}
-                            // description={book.description ? book.description : "No description available"}
-                            // link={book.link}
-                            // image={book.image ? book.image : "https://via.placeholder.com/128x166.png"}
                             />
                         );
                     })}  
