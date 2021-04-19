@@ -3,56 +3,47 @@ import API from "../../utils/API";
 import "./style.css";
 
 function Saved(props) {
-    const [books, setBooks] = useState([]);
-    // const[formObject,setFormObject] =useState({});
+    // const [books, setBooks] = useState([]);
 
-    useEffect(() => {
-        loadBooks()
-    }, [])
+    // useEffect(() => {
+    //     loadBooks()
+    // }, [])
 
-    function loadBooks() {
-        API.getBooks()
-        .then(res => {
-            console.log("retrieving books")
-            setBooks(res.data)
-        })
-        .catch(err => console.log(err));
-    }
+    // function loadBooks() {
+    //     API.getBooks()
+    //     .then(res => {
+    //         console.log("retrieving books")
+    //         setBooks(res.data)
+    //     })
+    //     .catch(err => console.log(err));
+    // }
 
      // Deletes a book from the database with a given id, then reloads books from the db
-    function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
-      .catch(err => console.log(err));
-  }
+ 
 
     return (
         <>
             <div className="cardDiv">
                 <ul>
-                    { console.log(books)}
-                    {books.map(book => {
-                        return (
-                            <>
-                                <h3>{book.title}</h3> 
-                                <p>Written by: {book.authors}</p>
+        
+                                <h3>{props.book.title}</h3> 
+                                <p>Written by: {props.book.authors}</p>
                                 <div className="imgDesc">
-                                    <img src={book.image} alt="book thumbnail"></img>
-                                    <p>{book.description}</p>
+                                    <img src={props.book.image ? props.book.image : "https://via.placeholder.com/128x166.png"} alt="book thumbnail"></img>
+                                    <p>{props.book.description ? props.book.description : "No description available"}</p>
                                 </div>
                                 <div className="buttons">
                                     <button className="btn bookBtn">
-                                        <a href={book.link} target="blank">More</a>
+                                        <a href={props.book.link} target="blank">More</a>
                                     </button>
                                     <button 
-                                        onClick={() => deleteBook(book._id)}
+                                        onClick={() => props.delete(props.book._id)}
                                         className="btn bookBtn">
                                         <a type="submit">Delete</a>
                                     </button>
                                 </div>
-                             </>
-                        );
-                    })}
+           
+                
                 </ul>
             </div>  
         </>

@@ -5,7 +5,6 @@ import API from "../utils/API";
 function SavedBooks() {
     // Setting our component's initial state
     const [books, setBooks] = useState([])
-    const [formObject, setFormObject] = useState({})
 
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -21,6 +20,12 @@ function SavedBooks() {
         .catch(err => console.log(err));
     };
 
+    function deleteBook(id) {
+        API.deleteBook(id)
+          .then(res => loadBooks())
+          .catch(err => console.log(err));
+      }
+
     return (
         <>
             <div className="savedBooks">
@@ -29,12 +34,15 @@ function SavedBooks() {
                         return (
                             <Saved
                             key={book._id}
-                            id={book._id}
-                            title={book.title}
-                            authors={book.authors}
-                            description={book.description ? book.description : "No description available"}
-                            link={book.link}
-                            image={book.image ? book.image : "https://via.placeholder.com/128x166.png"}
+                            book={book}
+                            delete={deleteBook}
+
+                            // id={book._id}
+                            // title={book.title}
+                            // authors={book.authors}
+                            // description={book.description ? book.description : "No description available"}
+                            // link={book.link}
+                            // image={book.image ? book.image : "https://via.placeholder.com/128x166.png"}
                             />
                         );
                     })}  

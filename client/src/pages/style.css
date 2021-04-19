@@ -12,14 +12,15 @@
 
 .searchBtn {
     margin-left: 20px;
-    background-color: wheat !important;
-    color: black !important;
+    color: wheat !important;
+    background-color: black !important;
+    
     
 }
 
-.btn:hover {
-    color: wheat !important;
-    background-color: black !important;
+.searchBtn:hover {
+    background-color: wheat !important;
+    color: black !important;
     border: 2px solid black;
     border-radius: 10px;
 }
